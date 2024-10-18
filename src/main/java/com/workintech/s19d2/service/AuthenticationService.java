@@ -28,7 +28,7 @@ public class AuthenticationService {
         Optional<Member> foundMember = memberRepository.findByEmail(email);
 
         if(foundMember.isPresent()){
-            throw new RuntimeException("User ith given email already exist! Email : " + email);
+            throw new RuntimeException("User with given email already exist");
         }
 
         List<Role> roleList = new ArrayList<>();
